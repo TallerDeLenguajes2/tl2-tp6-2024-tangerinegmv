@@ -55,3 +55,4 @@ C:\taller2_tp6_mvg\tl2-tp6-2024-tangerinegmv\obj\Debug\net8.0\refint\tl2-tp6-202
 C:\taller2_tp6_mvg\tl2-tp6-2024-tangerinegmv\obj\Debug\net8.0\tl2-tp6-2024-tangerinegmv.pdb
 C:\taller2_tp6_mvg\tl2-tp6-2024-tangerinegmv\obj\Debug\net8.0\tl2-tp6-2024-tangerinegmv.genruntimeconfig.cache
 C:\taller2_tp6_mvg\tl2-tp6-2024-tangerinegmv\obj\Debug\net8.0\ref\tl2-tp6-2024-tangerinegmv.dll
+C:\taller2_tp6_mvg\tl2-tp6-2024-tangerinegmv\obj\Debug\net8.0\tl2-tp6-2024-tangerinegmv.sourcelink.json

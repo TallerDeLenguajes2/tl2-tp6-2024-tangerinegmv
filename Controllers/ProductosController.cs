@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using tl2_tp6_2024_tangerinegmv.Controllers;
 
-[ApiController]
-[Route("[controller]")]
+
+
 
 
 public class ProductosController : Controller
@@ -18,22 +18,22 @@ public class ProductosController : Controller
         _logger = logger;
     }
 
-    [HttpGet]
-    public ActionResult<List<Productos>> Index()
+
+    public IActionResult Index()
     {
         return View(prodRep.ListarProductos());
     }
 
-    // [HttpGet]
-    // public IActionResult CrearProducto()
-    // {
-    //     return View();
-    // }
+    [HttpGet]
+    public IActionResult CrearProducto()
+    {
+        return View(new Productos());
+    }
 
-    // [HttpPost]
-    // public IActionResult CrearProducto(Productos producto)
-    // {
-    //     prodRep.CrearNuevo(producto);
-    //     return RedirectToAction("Index");
-    // }
+    [HttpPost]
+    public IActionResult CrearProducto(Productos producto)
+    {
+        prodRep.CrearNuevo(producto);
+        return RedirectToAction("Index");
+    }
 }
