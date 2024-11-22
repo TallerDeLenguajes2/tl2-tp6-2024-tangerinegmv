@@ -43,9 +43,25 @@ public class ProductosController : Controller
         return View(prodRep.DetallesProducto(id));
     }
     [HttpPost]
-    public ActionResult ModificarProducto(int id, Productos prod)
+    public IActionResult ModificarProducto(int id, Productos prod)
     {
       prodRep.ModificarProducto(id, prod);
       return RedirectToAction("Index");
     }
+
+    [HttpGet]
+    public IActionResult BorrarProducto(int id)
+    {
+      
+      return View(prodRep.DetallesProducto(id));
+    }
+
+ 
+    public IActionResult ConfirmarEliminacion(int id)
+    {
+        prodRep.BorrarProducto(id);
+        return RedirectToAction("Index");
+    }
+
+
 }

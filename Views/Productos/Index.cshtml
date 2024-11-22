@@ -26,7 +26,7 @@
             <td>@producto.Descripcion</td>
             <td>@producto.Precio</td>
             <td><button type="button" class="btn btn-primary"><a class="nav-link text-light" asp-area="" asp-controller="Productos" asp-action="ModificarProducto" asp-route-id="@producto.IdProducto">Modificar</a></button></td>
-            <td><button type="button" class="btn btn-danger"><a class="nav-link text-light" asp-area="" asp-controller="Productos" asp-action="EliminarProducto" asp-route-id="@producto.IdProducto">Eliminar</a></button></td>
+            <td><button type="button" class="btn btn-danger"><a class="nav-link text-light" asp-area="" asp-controller="Productos" asp-action="BorrarProducto" asp-route-id="@producto.IdProducto">Eliminar</a></button></td>
         </tr>
     }
   </tbody>
