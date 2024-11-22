@@ -1,4 +1,4 @@
-using Tienda;
+namespace Tienda;
 public class Presupuestos
 {
     private int idPresupuesto;
@@ -13,7 +13,7 @@ public class Presupuestos
     }
 
     public string? NombreDestinatario { get => nombreDestinatario; set => nombreDestinatario = value; }
-    public int IdPresupuesto { set => idPresupuesto = value; }
+    public int IdPresupuesto {get => idPresupuesto; set => idPresupuesto = value; }
     public List<PresupuestosDetalle> Detalle { get => detalle; }
     public string? FechaCreacion { get => fechaCreacion; set => fechaCreacion = value; }
 
@@ -21,7 +21,7 @@ public class Presupuestos
         return detalle.Sum(p => p.Producto.Precio * p.Cantidad);
     }
     public double MontoPresupuestoConIva(){
-        return detalle.Sum(p => p.Producto.Precio*(1 + IVA) * p.Cantidad);
+         return MontoPresupuesto()*(1+IVA);
     }
     public int CantidadProductos(){
         return detalle.Sum(p => p.Cantidad);
