@@ -35,7 +35,8 @@ public class PresupuestosRepository
                         presup.IdPresupuesto = Convert.ToInt32(reader["idPresupuesto"]);
                         presup.NombreDestinatario = reader["NombreDestinatario"].ToString();
                         presup.FechaCreacion = reader["FechaCreacion"].ToString();
-                        presup.CargarDetallesPresupuesto(ListarDetallePresupuesto(Convert.ToInt32(reader["idPresupuesto"])));
+                        //presup.CargarDetallesPresupuesto(ListarDetallePresupuesto(Convert.ToInt32(reader["idPresupuesto"])));
+                        //cargar esta en el models de presupuesto de gonza
                         listaPresup.Add(presup);
                     }
                 }
