@@ -36,4 +36,16 @@ public class ProductosController : Controller
         prodRep.CrearNuevo(producto);
         return RedirectToAction("Index");
     }
+
+    [HttpGet]
+    public IActionResult ModificarProducto(int id)
+    {
+        return View(prodRep.DetallesProducto(id));
+    }
+    [HttpPost]
+    public ActionResult ModificarProducto(int id, Productos prod)
+    {
+      prodRep.ModificarProducto(id, prod);
+      return RedirectToAction("Index");
+    }
 }
